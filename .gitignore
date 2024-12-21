@@ -34,4 +34,4 @@ go.work.sum
 .DS_Store
 
 # Output binary
-./wyllow
+/wyllow

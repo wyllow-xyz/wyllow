@@ -1,8 +1,13 @@
 wyllow:
-	@go build ./cmd/wyllow/
+	@make templ_gen && go build ./cmd/wyllow/
 run:
-	@go run ./cmd/wyllow/
+	@make templ_gen && go run ./cmd/wyllow/
 test:
-	@go test ./...
+	@make templ_gen && go test ./...
 clean:
 	@rm ./wyllow
+
+templ_check:
+	@templ fmt -fail .
+templ_gen:
+	@templ fmt . && templ generate
