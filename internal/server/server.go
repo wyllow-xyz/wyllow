@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 
 	"github.com/wyllow-xyz/wyllow/internal/components/pages"
 )
@@ -11,6 +12,10 @@ import (
 // Creates and returns a new HTTP server with a predefined router.
 func New() *http.Server {
 	router := chi.NewMux()
+
+	router.Use(middleware.Recoverer)
+	router.Use(middleware.Logger)
+	router.Use(middleware.RealIP)
 
 	router.Get("/", handleHome)
 

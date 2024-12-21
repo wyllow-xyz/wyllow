@@ -2,6 +2,8 @@ wyllow:
 	@make templ_gen && go build ./cmd/wyllow/
 run:
 	@make templ_gen && go run ./cmd/wyllow/
+dev:
+	@air -c .air.toml
 test:
 	@make templ_gen && go test ./...
 clean:

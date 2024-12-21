@@ -31,6 +31,12 @@
 
             # https://github.com/golangci/golangci-lint
             golangci-lint
+
+            # go templating library
+            templ
+
+            # hot reloading
+            air
           ];
         };
       });

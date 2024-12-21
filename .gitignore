@@ -35,3 +35,6 @@ go.work.sum
 
 # Output binary
 /wyllow
+
+# Temporary files
+/tmp
