@@ -23,8 +23,9 @@ func New() *http.Server {
 
 	// Serve embedded static files
 	staticFileServer := http.FileServer(http.FS(staticFiles))
-	router.Handle("/*", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		r.URL.Path = "/assets/static" + r.URL.Path
+	router.Handle("/*", staticFileServer)
+	router.Handle("/favicon.ico", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		r.URL.Path = "/assets/static/favicon.ico"
 		staticFileServer.ServeHTTP(w, r)
 	}))
 

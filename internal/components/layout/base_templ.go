@@ -29,7 +29,7 @@ func Base() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Wyllow</title><script src=\"https://cdn.tailwindcss.com\"></script></head><body class=\"bg-gray-100\"><nav class=\"bg-white shadow-lg\"><div class=\"max-w-6xl mx-auto px-4\"><div class=\"flex justify-between\"><div class=\"flex space-x-7\"><div><a href=\"/\" class=\"flex items-center py-4 px-2\"><span class=\"font-semibold text-gray-500 text-lg\">Wyllow</span></a></div></div></div></div></nav>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Wyllow</title><link rel=\"stylesheet\" href=\"/assets/static/css/output.css\"></head><body class=\"bg-gray-100 font-mono\"><nav class=\"bg-white shadow-lg\"><div class=\"max-w-6xl mx-auto px-4\"><div class=\"flex justify-between\"><div class=\"flex space-x-7\"><div><a href=\"/\" class=\"flex items-center py-4 px-2\"><span class=\"font-semibold text-gray-500 text-lg\">Wyllow</span></a></div></div></div></div></nav>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

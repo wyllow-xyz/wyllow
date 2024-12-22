@@ -37,6 +37,10 @@
 
             # hot reloading
             air
+
+            # pnpm node package manager and tailwind
+            pnpm
+            tailwindcss
           ];
         };
       });
