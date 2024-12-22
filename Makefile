@@ -1,5 +1,5 @@
 wyllow:
-	@make templ_gen && go build ./cmd/wyllow/
+	@make templ_gen && go build -o ./tmp/wyllow ./cmd/wyllow/
 run:
 	@make templ_gen && go run ./cmd/wyllow/
 dev:
@@ -7,7 +7,7 @@ dev:
 test:
 	@make templ_gen && go test ./...
 clean:
-	@rm ./wyllow
+	@if [ -f ./tmp/wyllow ]; then rm ./tmp/wyllow; fi
 
 templ_check:
 	@templ fmt -fail .
